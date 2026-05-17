@@ -20,8 +20,7 @@ class Student:
 s=Student()
 print(s._name)
 
-#Private method(we cannot print or access the methods like protected,
-#so we must need to take a method to access the private methods )
+#Private method(we cannot print or access the methods like protected,so we must need to take a method to access the private methods )
 class Employee:
     def __init__(self):
         self.__salary=1200000
@@ -47,7 +46,7 @@ class AC:
     def __init__(self):
         self.__temp=26
     def increase(self,degree):
-        self.__temp+=degree#if we remove + here we can directly assign the required temperature 
+        self.__temp+=degree #if we remove + here we can directly assign the required temperature 
     def show_temp(self):
         print(self.__temp)
 t=AC()
