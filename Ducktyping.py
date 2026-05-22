@@ -1,5 +1,6 @@
-#Duck-typing
-'''class Bird:
+#Duck-typing 
+#Example-1
+class Bird:
     def fly(self):
         print("Bird is flying")
 class Airplane:
@@ -8,8 +9,8 @@ class Airplane:
 def make_it_fly(obj):
     obj.fly()
 make_it_fly(Bird())
-make_it_fly(Airplane())'''
-
+make_it_fly(Airplane())
+#Example-2
 class Androidphone:
     def charge(self):
         print("Android phone is charging")
