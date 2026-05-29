@@ -1,5 +1,5 @@
 #Linked lists
-'''class Node:
+class Node:
     def __init__(self,data):
         self.data=data
         self.next=None
@@ -15,8 +15,6 @@ while temp:
     print(temp.data,end="->")
     temp=temp.next
 print("None")
-'''
-
 #Single linked list
 class  Node:
     def __init__(self,data):
@@ -25,6 +23,7 @@ class  Node:
 class SLL:
     def __init__(self):
         self.head=None
+    #Insert a new node in the begining of the list
     def insert_begin(self,data):
         new=Node(data)
         if self.head is None:
@@ -32,6 +31,7 @@ class SLL:
             return
         new.next=self.head
         self.head=new
+    #Insert a new node in the middle of the list
     def insert_middle(self,pos,data):
         new=Node(data)
         temp=self.head
@@ -39,6 +39,7 @@ class SLL:
             temp=temp.next
         new.next=temp.next
         temp.next=new
+    #Insert a new node in the ending of the list
     def insert_end(self,data):
         new=Node(data)
         if self.head is None:
@@ -48,11 +49,13 @@ class SLL:
         while temp.next:
             temp=temp.next
         temp.next=new
+    #Delete a new node in the begining of the list
     def del_begin(self):
         if self.head is None:
             print("List is Empty")
             return
         self.head=self.head.next
+    #Delete a new node in the begining of the list
     def del_end(self):
         if self.head is None:
             print("List is Empty")
@@ -61,6 +64,7 @@ class SLL:
         while temp.next.next:
             temp=temp.next
         temp.next=None
+    #Delete a new node in the begining of the list
     def del_middle(self,middle):
         if self.head is None:
             print("List is Empty")
@@ -69,6 +73,7 @@ class SLL:
         for i in range(middle-2):
             temp=temp.next
         temp.next=temp.next.next
+    #Search a node in the linked list
     def search(self,key):
         temp=self.head
         pos=1
@@ -98,8 +103,3 @@ s.del_end()
 s.del_middle(2)
 s.traverse()
 s.search(60)
-
-
-
-
-
